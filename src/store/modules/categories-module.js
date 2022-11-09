@@ -19,6 +19,7 @@ export default {
             },
         ],
         currentCategory: {},
+        sidebar: false
     },
     getters: {},
     mutations: {},
