@@ -1,0 +1,10 @@
+[DONE] Do kazdego blogu dodac categoryId 
+[DONE] blogi nalezy przypisac do kategorii
+[DONE] rozbudowac layout o sekcje z kategoriami 
+po kliknieciu w kategorie maja sie ladowac tylko blogi z danej kategorii
+Wskazówka: 
+uyć funkcji filter na blogach aby otrzymać tylko filtr danej kategorii
+poczytac o paramsach routera ! 
+konwencja setter, getter
+______________
+cale widoki dajemy do views, mniejsze moduly, komponenty dajemy do components
