@@ -13,9 +13,16 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 Vue.config.productionTip = false
+Vue.prototype.$ll = function (key) {
+    let ll = store.state.Lang.ll;
+    let lang = store.state.Lang.lang
+    if (ll[lang][key]) {
+      return ll[lang][key];
+    }
+  },
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+  new Vue({
+    router,
+    store,
+    render: h => h(App)
+  }).$mount('#app')

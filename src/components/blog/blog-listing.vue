@@ -5,7 +5,7 @@
         <h1 class="mx-auto" v-if="currentCategory.name">
           KATEGORIA: {{ currentCategory.name }}
         </h1>
-        <h1 class="mx-auto" v-else>Witamy na blogu!</h1>
+        <h1 class="mx-auto" v-else>{{ $ll("welcomeHome") }}</h1>
       </div>
       <div v-if="blogs.length > 0" class="row">
         <router-link
@@ -49,6 +49,9 @@ export default {
         return blogs.filter(
           (blog) => blog.categoryId == this.currentCategory.id
         );
+    },
+    lang() {
+      return this.$store.state.Lang.lang;
     },
   },
 };

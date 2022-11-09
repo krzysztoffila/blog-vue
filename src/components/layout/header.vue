@@ -15,13 +15,7 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <Search />
-
-        <b-nav-item-dropdown text="Lang" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-          <b-dropdown-item href="#">RU</b-dropdown-item>
-          <b-dropdown-item href="#">FA</b-dropdown-item>
-        </b-nav-item-dropdown>
+        <Lang />
 
         <b-nav-item-dropdown right>
           <!-- Using 'button-content' slot -->
@@ -37,6 +31,7 @@
 </template>
 <script>
 import Search from "@/components/search/search.vue";
+import Lang from "@/components/lang/lang.vue";
 export default {
   computed: {
     sidebar: {
@@ -48,6 +43,6 @@ export default {
       },
     },
   },
-  components: { Search },
+  components: { Search, Lang },
 };
 </script>
