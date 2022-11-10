@@ -1,8 +1,9 @@
 <template>
   <div class="single-blog container">
-    <h1 class="text-center">{{ blog.title }}</h1>
-    <h2 class="text-center">{{ blog.subtitle }}</h2>
+    <h1 class="text-center">{{ blog.title_pl }}</h1>
+    <h2 class="text-center">{{ blog.subtitle_pl }}</h2>
     <img class="img-fluid" :src="blog.photo" alt="" />
+    <p class="m-5">{{ blog.content_pl }}</p>
   </div>
 </template>
 

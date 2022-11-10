@@ -15,9 +15,8 @@
           :key="`blog-${blog.id}`"
         >
           <img class="img-fluid mb-2" :src="blog.photo" alt="" loading="lazy" />
-          <h4 class="font-weight-bold text-center mb-0">{{ blog.title }}</h4>
-          <i class="text-center w-100 d-block">{{ blog.subtitle }}</i>
-          <span>{{ blog.categoryId }}</span>
+          <h4 class="font-weight-bold text-center mb-0">{{ blog.title_pl }}</h4>
+          <i class="text-center w-100 d-block">{{ blog.subtitle_pl }}</i>
         </router-link>
       </div>
       <div v-else class="row p-4 text-center">
@@ -40,8 +39,10 @@ export default {
     },
     blogs() {
       let blogs = this.$store.state.Blog.blogs;
-      blogs = blogs.filter((blog) =>
-        blog.title.toLowerCase().includes(this.search.toLowerCase())
+      blogs = blogs.filter(
+        (blog) =>
+          blog.title_pl.toLowerCase().includes(this.search.toLowerCase()) ||
+          blog.title_en.toLowerCase().includes(this.search.toLowerCase())
       );
       if (!this.currentCategory.id) {
         return blogs;
@@ -56,3 +57,11 @@ export default {
   },
 };
 </script>
+<style scoped lang="scss">
+a {
+  color: #000;
+  &:hover {
+    text-decoration: none;
+  }
+}
+</style>

@@ -8,3 +8,8 @@ poczytac o paramsach routera !
 konwencja setter, getter
 ______________
 cale widoki dajemy do views, mniejsze moduly, komponenty dajemy do components
+______________
+[DONE]tłumaczenie blogow i kategorii np. title_en, title_pl
+[DONE]zaktualizować wyszukiwarke po jezyku tytułu
+przycisk aktywnej kategorii powinien miec klase button-primary a nie button-outline
+stworzyć cookie
