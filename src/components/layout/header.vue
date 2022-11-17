@@ -15,7 +15,8 @@
       <b-navbar-nav class="ml-auto">
         <Search />
         <Lang />
-        <Login />
+        <b-nav-item :to="{ name: 'login' }">Login</b-nav-item>
+        <b-nav-item :to="{ name: 'register' }">Register</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -23,7 +24,6 @@
 <script>
 import Search from "@/components/search/search.vue";
 import Lang from "@/components/lang/lang.vue";
-import Login from "@/components/login/login.vue";
 export default {
   computed: {
     sidebar: {
@@ -35,6 +35,6 @@ export default {
       },
     },
   },
-  components: { Search, Lang, Login },
+  components: { Search, Lang },
 };
 </script>
