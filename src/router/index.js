@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 import HomeView from '../views/HomeView.vue'
 import SingleBlog from '@/views/SingleBlog.vue'
-
+import Login from '@/views/Login.vue'
 Vue.use(VueRouter)
 
 const routes = [{
@@ -16,6 +16,11 @@ const routes = [{
     path: '/blog/:blogId',
     name: 'singleBlog',
     component: SingleBlog
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
   }
 ]
 

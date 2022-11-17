@@ -9,22 +9,13 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item @click="sidebar = !sidebar">Categories</b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <Search />
         <Lang />
-
-        <b-nav-item-dropdown right>
-          <!-- Using 'button-content' slot -->
-          <template #button-content>
-            <em>User</em>
-          </template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
-          <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-        </b-nav-item-dropdown>
+        <Login />
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -32,6 +23,7 @@
 <script>
 import Search from "@/components/search/search.vue";
 import Lang from "@/components/lang/lang.vue";
+import Login from "@/components/login/login.vue";
 export default {
   computed: {
     sidebar: {
@@ -43,6 +35,6 @@ export default {
       },
     },
   },
-  components: { Search, Lang },
+  components: { Search, Lang, Login },
 };
 </script>

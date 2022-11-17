@@ -1,7 +1,8 @@
+import getCookie from '@/helpers/cookies/get-cookie.js'
 export default {
     namespaced: true,
     state() {
-        let lang = "pl"
+        let lang = getCookie('lang') || "pl"
         let languages = ["pl", "en"]
         let ll = {
             pl: {
@@ -18,5 +19,3 @@ export default {
         }
     },
 }
-//ll jest na sztywno -> potrzeba się dobrać dynamicznie, aby nie przepisywać osobno wartości dla PL i EN 
-// Powinno od razu wyciagac ..._pl lub ..._en

@@ -9,8 +9,10 @@
       <div class="px-3 py-2">
         <ul v-for="category in categories" :key="`category-${category.id}`">
           <b-button
-            variant="outline-primary"
             @click="setCurrentCategory(category)"
+            :variant="
+              currentCategory.id == category.id ? `primary` : `outline-primary`
+            "
           >
             <li>{{ category.name }} : {{ category.id }}</li>
           </b-button>
@@ -40,7 +42,6 @@ export default {
       },
     },
   },
-  //DOPISAĆ
   methods: {
     setCurrentCategory(category) {
       if (this.currentCategory.id == category.id) {

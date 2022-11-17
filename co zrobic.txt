@@ -1,15 +1,20 @@
 [DONE] Do kazdego blogu dodac categoryId 
-[DONE] blogi nalezy przypisac do kategorii
-[DONE] rozbudowac layout o sekcje z kategoriami 
-po kliknieciu w kategorie maja sie ladowac tylko blogi z danej kategorii
-Wskazówka: 
-uyć funkcji filter na blogach aby otrzymać tylko filtr danej kategorii
-poczytac o paramsach routera ! 
-konwencja setter, getter
+[DONE] Blogi nalezy przypisac do kategorii
+[DONE] Rozbudowac layout o sekcje z kategoriami 
+[DONE] Po kliknieciu w kategorie maja sie ladowac tylko blogi z danej kategorii
+        Wskazówka: uzyć funkcji filter na blogach aby otrzymać tylko filtr danej kategorii
+[DONE] Tłumaczenie blogow i kategorii np. title_en, title_pl
+[DONE] Zaktualizować wyszukiwarke po jezyku tytułu
+[TODO] Przycisk aktywnej kategorii powinien miec klase button-primary a nie button-outline
+*.stworzyć cookie
+*.poczytac o paramsach routera ! 
+*.konwencja setter, getter
 ______________
-cale widoki dajemy do views, mniejsze moduly, komponenty dajemy do components
-______________
-[DONE]tłumaczenie blogow i kategorii np. title_en, title_pl
-[DONE]zaktualizować wyszukiwarke po jezyku tytułu
-przycisk aktywnej kategorii powinien miec klase button-primary a nie button-outline
-stworzyć cookie
+:variant="[isClicked ? 'primary' : 'success']" -> @click:"changeColor"
+DATA:      isClicked: true,
+METHODS: changeColor() {
+      this.isClicked = !this.isClicked;
+    },
+BEM
+BLOK__ELEMENT--MODYFIKATOR
+DRUGI-BLOK__DRUGI-ELEMENT--JAKIS-MODYFIKATOR

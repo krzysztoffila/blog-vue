@@ -15,8 +15,12 @@
           :key="`blog-${blog.id}`"
         >
           <img class="img-fluid mb-2" :src="blog.photo" alt="" loading="lazy" />
-          <h4 class="font-weight-bold text-center mb-0">{{ blog.title_pl }}</h4>
-          <i class="text-center w-100 d-block">{{ blog.subtitle_pl }}</i>
+          <h4 class="font-weight-bold text-center mb-0">
+            {{ blog[`title_${lang}`] }}
+          </h4>
+          <i class="text-center w-100 d-block">{{
+            blog[`subtitle_${lang}`]
+          }}</i>
         </router-link>
       </div>
       <div v-else class="row p-4 text-center">
