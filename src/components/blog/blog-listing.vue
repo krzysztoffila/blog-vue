@@ -30,6 +30,8 @@
   </div>
 </template>
 <script>
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "@/plugins/firebase/firebase.js";
 export default {
   data() {
     return {};
@@ -59,6 +61,12 @@ export default {
       return this.$store.state.Lang.lang;
     },
   },
+  // async created() {
+  //   let categories = this.$store.state.Categories.categories;
+  //   for (let category of categories) {
+  //     const docRef = await addDoc(collection(db, "categories"), category);
+  //   }
+  // },
 };
 </script>
 <style scoped lang="scss">
