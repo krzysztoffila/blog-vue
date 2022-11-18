@@ -18,7 +18,6 @@ export default function getCollection(collectionName, storeModuleName, storeStat
             obj.id = doc.id
             data.push(obj);
         });
-        console.log(data);
         store.state[storeModuleName][storeState] = data;
     });
 }

@@ -5,8 +5,9 @@
         Wskazówka: uzyć funkcji filter na blogach aby otrzymać tylko filtr danej kategorii
 [DONE] Tłumaczenie blogow i kategorii np. title_en, title_pl
 [DONE] Zaktualizować wyszukiwarke po jezyku tytułu
-[TODO] Przycisk aktywnej kategorii powinien miec klase button-primary a nie button-outline
-*.stworzyć cookie
+[DONE] Przycisk aktywnej kategorii powinien miec klase button-primary a nie button-outline
+[DONE] stworzyć cookie
+[TODO] Rejestracja, logowanie w firebase
 *.poczytac o paramsach routera ! 
 *.konwencja setter, getter
 ______________
