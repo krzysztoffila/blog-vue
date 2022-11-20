@@ -6,10 +6,20 @@ export default {
         let languages = ["pl", "en"]
         let ll = {
             pl: {
-                welcomeHome: 'Witamy na Blogu!'
+                welcomeHome: 'Hejka! - Witam na moim blogu!',
+                categoryHeader: 'Kategorie',
+                searchInput: 'Szukaj',
+                changeLanguage: 'Język',
+                loginHeader: 'Zaloguj',
+                registerHeader: 'Zarejestruj się'
             },
             en: {
-                welcomeHome: 'Welcome on my Blog!'
+                welcomeHome: 'Hello Mate! - Welcome on my Blog!',
+                categoryHeader: 'Categories',
+                searchInput: 'Search',
+                changeLanguage: 'Language',
+                loginHeader: 'Login',
+                registerHeader: 'Register'
             }
         }
         return {

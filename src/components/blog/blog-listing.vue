@@ -49,7 +49,9 @@ export default {
       blogs = blogs.filter(
         (blog) =>
           blog.title_pl.toLowerCase().includes(this.search.toLowerCase()) ||
-          blog.title_en.toLowerCase().includes(this.search.toLowerCase())
+          blog.title_en.toLowerCase().includes(this.search.toLowerCase()) ||
+          blog.subtitle_pl.toLowerCase().includes(this.search.toLowerCase()) ||
+          blog.subtitle_en.toLowerCase().includes(this.search.toLowerCase())
       );
       if (!this.currentCategory.id) {
         return blogs;
@@ -70,8 +72,13 @@ export default {
 <style scoped lang="scss">
 a {
   color: #000;
+  transition: 0.3s;
   &:hover {
     text-decoration: none;
+    color: #17a2b8;
   }
+}
+h1 {
+  padding-bottom: 2rem;
 }
 </style>

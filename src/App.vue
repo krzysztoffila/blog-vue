@@ -19,6 +19,15 @@ export default {
 };
 </script>
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap");
+* {
+  // font-family: "Outfit", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+}
+h1 {
+  text-transform: uppercase;
+}
 main {
   padding: 2rem;
 }

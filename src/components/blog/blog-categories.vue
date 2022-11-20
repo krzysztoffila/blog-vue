@@ -14,7 +14,7 @@
               currentCategory.id == category.id ? `primary` : `outline-primary`
             "
           >
-            <li>{{ category.name }} : {{ category.id }}</li>
+            <li>{{ category.name }}</li>
           </b-button>
         </ul>
       </div>

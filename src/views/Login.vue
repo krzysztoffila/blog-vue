@@ -22,7 +22,11 @@
       </div>
       <div class="alternative-option mt-4">
         You don't have an account?
-        <b-button type="submit" variant="outline-primary" id="register_button">
+        <b-button
+          :to="`/register`"
+          variant="outline-primary"
+          id="register_button"
+        >
           Register
         </b-button>
       </div>

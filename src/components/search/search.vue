@@ -4,9 +4,11 @@
       v-model="search"
       size="sm"
       class="mr-sm-2"
-      placeholder="Search"
+      placeholder="Szukaj"
     ></b-form-input>
-    <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
+    <b-button size="sm" class="my-2 my-sm-0" type="submit">{{
+      $ll("searchInput")
+    }}</b-button>
   </b-nav-form>
 </template>
 
