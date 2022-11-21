@@ -83,12 +83,17 @@
         </b-form-checkbox-group>
       </b-form-group>
 
-      <b-button type="submit" variant="primary">Submit</b-button>
+      <b-button type="submit" variant="primary" @click="register"
+        >Register</b-button
+      >
     </b-form>
   </div>
 </template>
 
 <script>
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/plugins/firebase/firebase";
+
 export default {
   data() {
     return {
@@ -134,6 +139,22 @@ export default {
     onSubmit(event) {
       event.preventDefault();
       this.validate();
+    },
+    register() {
+      const email = this.form.email;
+      const password = this.form.password;
+      const register = () => {
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((data) => {
+            console.log("Zarejestrowano Pomyślnie");
+            this.$router.push("/");
+          })
+          .catch((error) => {
+            console.log(error.code);
+            alert(error.message);
+          });
+      };
+      register();
     },
   },
   filters: {

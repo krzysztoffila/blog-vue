@@ -5,6 +5,7 @@ import Categories from '@/store/modules/categories-module.js'
 import Search from '@/store/modules/search-module.js'
 import Lang from '@/store/modules/lang-module.js'
 import Login from '@/store/modules/login-module.js'
+import Register from '@/store/modules/register-module.js'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -13,6 +14,7 @@ export default new Vuex.Store({
     Categories,
     Search,
     Lang,
-    Login
+    Login,
+    Register
   }
 })

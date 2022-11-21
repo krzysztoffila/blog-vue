@@ -10,23 +10,29 @@ Vue.use(VueRouter)
 const routes = [{
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
-    //Przykładowy params TO PO : 
+    //Przykładowy params TO PO :
     path: '/blog/:blogId',
     name: 'singleBlog',
-    component: SingleBlog
+    component: SingleBlog,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: '/login',
     name: 'login',
-    component: Login
+    component: Login,
   },
   {
     path: '/register',
     name: 'register',
-    component: Register
+    component: Register,
   }
 ]
 
