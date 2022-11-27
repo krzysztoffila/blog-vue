@@ -1,11 +1,10 @@
 export default {
-    namespaced: true,
-    state: {
-        email: '',
-        username: '',
-        password: ''
-    },
-    getters: {},
-    mutations: {},
-    actions: {},
+  namespaced: true,
+  state: {
+    email: '',
+    password: ''
+  },
+  getters: {},
+  mutations: {},
+  actions: {},
 }

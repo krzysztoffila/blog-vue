@@ -1,25 +1,27 @@
 <template>
   <div class="login container w-25 text-center">
-    <form>
+    <b-form @submit="onSubmit">
       <h2 class="mb-3">Login</h2>
-      <div class="input">
-        <label for="email">Email address</label>
-        <input
-          class="form-control"
-          type="text"
-          name="email"
-          placeholder="email@adress.com"
-        />
-      </div>
-      <div class="input">
-        <label for="password">Password</label>
-        <input
-          class="form-control"
+      <b-form-group id="input-group-1" label="Enter Email" label-for="input-1">
+        <b-form-input
+          id="input-1"
+          v-model="form.email"
+          type="email"
+          placeholder="Enter email"
+          aria-describedby="input-email-feedback"
+          required
+        ></b-form-input>
+      </b-form-group>
+      <b-form-group id="input-group-2" label="Password" label-for="input-2">
+        <b-form-input
+          id="input-2"
+          v-model="form.password"
           type="password"
-          name="password"
-          placeholder="password123"
-        />
-      </div>
+          placeholder="Enter password"
+          aria-describedby="input-password-feedback"
+          required
+        ></b-form-input>
+      </b-form-group>
       <div class="alternative-option mt-4">
         You don't have an account?
         <b-button
@@ -33,12 +35,27 @@
       <b-button type="submit" variant="primary" id="login_button">
         Login
       </b-button>
-    </form>
+    </b-form>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      form: {
+        email: "",
+        password: "",
+      },
+    };
+  },
+  methods: {
+    onSubmit(event) {
+      event.preventDefault();
+    },
+    // DODAĆ METODĘ LOGIN
+  },
+};
 </script>
 
 <style></style>
