@@ -14,7 +14,6 @@
           {{ errors.name }}
         </b-form-invalid-feedback>
       </b-form-group>
-
       <b-form-group
         id="input-group-1"
         label="Email address:"
@@ -70,7 +69,6 @@
           {{ errors.confirmPassword | errorsFilter }}
         </b-form-invalid-feedback>
       </b-form-group>
-
       <b-form-group id="input-group-4" v-slot="{ ariaDescribedby }">
         <b-form-checkbox-group
           v-model="form.checked"
@@ -82,7 +80,6 @@
           >
         </b-form-checkbox-group>
       </b-form-group>
-
       <b-button type="submit" variant="primary" @click="register"
         >Register</b-button
       >
@@ -147,6 +144,7 @@ export default {
         createUserWithEmailAndPassword(auth, email, password)
           .then((data) => {
             console.log("Zarejestrowano Pomyślnie");
+            console.log(auth.currentUser);
             this.$router.push("/");
           })
           .catch((error) => {

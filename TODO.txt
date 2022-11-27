@@ -8,7 +8,8 @@
 [DONE] Przycisk aktywnej kategorii powinien miec klase button-primary a nie button-outline
 [DONE] Stworzyć cookie
 ______________
-[TODO] Rejestracja[DONE], logowanie[TODO]  w firebase
+[DONE] Rejestracja, logowanie  w firebase
+       [TODO] - Problem przy pętli Switch
        Co zrobić jak user nie istnieje!
        Co zrobić jak user istnieje a błędne Hasło
 [TODO] Stworzyć kolekcję users - zapisywanie danych uzytkownika bez hasła
