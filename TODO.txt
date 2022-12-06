@@ -10,11 +10,12 @@
 [DONE] Rejestracja, logowanie  w firebase
        [TODO] - Problem przy pętli Switch(obsługa błędów)
 [DONE] Przekazać wartości rejestracji przez argumenty funkcji.
+[DONE] Naprawić przycisk - 68 linia w Header.vue
 ______________
-[TODO] Naprawić przycisk - 68 linia w Header.vue
 [TODO] Stworzyć kolekcję users - zapisywanie danych uzytkownika bez hasła
 [TODO] Przenieść logowanie, rejestracje do store
 [TODO] Poprawić języki na stronie
+[TODO] Zrobić toast -> trzymać w store
 ______________
 
 BEM

@@ -23,20 +23,22 @@
       <b-navbar-nav class="ml-auto">
         <Search />
         <Lang :show-flags="true" />
-        <b-nav-item :to="{ name: 'login' }">{{
-          $ll("loginHeader")
-        }}</b-nav-item>
-        <b-nav-item :to="{ name: 'register' }">{{
-          $ll("registerHeader")
-        }}</b-nav-item>
-        <!-- <b-button
-          @click="handleSingOut"
+        <template v-if="!isLoggedIn">
+          <b-nav-item :to="{ name: 'login' }">{{
+            $ll("loginHeader")
+          }}</b-nav-item>
+          <b-nav-item :to="{ name: 'register' }">{{
+            $ll("registerHeader")
+          }}</b-nav-item>
+        </template>
+        <b-button
+          @click="handleSignOut"
           v-if="isLoggedIn"
           size="sm"
           class="my-2 my-sm-0"
           type="submit"
           >Wyloguj</b-button
-        > -->
+        >
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -44,32 +46,34 @@
 <script>
 import Search from "@/components/search/search.vue";
 import Lang from "@/components/lang/lang.vue";
-// import { onMounted } from "vue";
-// import { getAuth, onAuthStateChanged, singOut } from "firebase/auth";
-// let auth;
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+let auth;
 export default {
   data() {
     return {
-      // isLoggedIn: true,
+      isLoggedIn: true,
     };
   },
-  // methods: {
-  //   onMounted: function() {
-  //     auth = getAuth();
-  //     onAuthStateChanged(auth, (user) => {
-  //       if (user) {
-  //         isLoggedIn = true;
-  //       } else {
-  //         isLoggedIn = false;
-  //       }
-  //     });
-  //   },
-  //   handleSingOut: function() {
-  //     singOut(auth).then(() => {
-  //       this.$router.push("/");
-  //     });
-  //   },
-  // },
+  mounted: function () {
+    auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        this.isLoggedIn = true;
+      } else {
+        this.isLoggedIn = false;
+      }
+    });
+  },
+  methods: {
+    handleSignOut: function () {
+      signOut(auth).then(() => {
+        if (this.$route.path != "/") {
+          this.$router.push("/");
+        }
+        console.log("Wylogowano!");
+      });
+    },
+  },
   computed: {
     sidebar: {
       get() {

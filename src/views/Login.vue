@@ -61,7 +61,7 @@ export default {
     login() {
       const email = this.form.email;
       const password = this.form.password;
-      const errMsg = this.form.errMsg;
+      let errMsg = this.form.errMsg;
       const login = () => {
         signInWithEmailAndPassword(auth, email, password)
           .then((data) => {
