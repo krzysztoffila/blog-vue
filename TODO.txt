@@ -2,20 +2,19 @@
 [DONE] Blogi nalezy przypisac do kategorii
 [DONE] Rozbudowac layout o sekcje z kategoriami
 [DONE] Po kliknieciu w kategorie maja sie ladowac tylko blogi z danej kategorii
-        Wskazówka: uzyć funkcji filter na blogach aby otrzymać tylko filtr danej kategorii
+       Wskazówka: uzyć funkcji filter na blogach aby otrzymać tylko filtr danej kategorii
 [DONE] Tłumaczenie blogow i kategorii np. title_en, title_pl
 [DONE] Zaktualizować wyszukiwarke po jezyku tytułu
 [DONE] Przycisk aktywnej kategorii powinien miec klase button-primary a nie button-outline
 [DONE] Stworzyć cookie
-______________
 [DONE] Rejestracja, logowanie  w firebase
-       [TODO] - Problem przy pętli Switch
-       Co zrobić jak user nie istnieje!
-       Co zrobić jak user istnieje a błędne Hasło
+       [TODO] - Problem przy pętli Switch(obsługa błędów)
+[DONE] Przekazać wartości rejestracji przez argumenty funkcji.
+______________
+[TODO] Naprawić przycisk - 68 linia w Header.vue
 [TODO] Stworzyć kolekcję users - zapisywanie danych uzytkownika bez hasła
-[TODO] Przekazać wartości rejestracji przez argumenty funkcji.
-[TODO] Przenieść to do store
-[TODO] Ustawić języki w Logowaniu, Rejestracji, SingleBlog
+[TODO] Przenieść logowanie, rejestracje do store
+[TODO] Poprawić języki na stronie
 ______________
 
 BEM

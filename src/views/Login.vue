@@ -50,7 +50,7 @@ export default {
       form: {
         email: "",
         password: "",
-        // errMsg: "",
+        errMsg: "",
       },
     };
   },
@@ -61,7 +61,7 @@ export default {
     login() {
       const email = this.form.email;
       const password = this.form.password;
-      // const errMsg = this.form.errMsg;
+      const errMsg = this.form.errMsg;
       const login = () => {
         signInWithEmailAndPassword(auth, email, password)
           .then((data) => {
@@ -71,22 +71,22 @@ export default {
           })
           .catch((error) => {
             console.log(error.code);
-            // switch (error.code) {
-            //   case "auth/invalid-email":
-            //     errMsg = "Invalid email";
-            //     break;
-            //   case "auth/user-not-found":
-            //     errMsg = "No account with thah email was found";
-            //     break;
-            //   case "auth/wrong-password":
-            //     errMsg = "Incorrect password";
-            //     break;
-            //   case "auth/user-disabled":
-            //     errMsg = "User is disabled";
-            //     break;
-            //   default:
-            //     errMsg = "Email or password was incorrect";
-            // }
+            switch (error.code) {
+              case "auth/invalid-email":
+                errMsg = "Invalid email";
+                break;
+              case "auth/user-not-found":
+                errMsg = "No account with thah email was found";
+                break;
+              case "auth/wrong-password":
+                errMsg = "Incorrect password";
+                break;
+              case "auth/user-disabled":
+                errMsg = "User is disabled";
+                break;
+              default:
+                errMsg = "Email or password was incorrect";
+            }
             alert(error.message);
           });
       };

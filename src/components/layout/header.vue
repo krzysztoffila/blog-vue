@@ -22,13 +22,21 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <Search />
-        <Lang />
+        <Lang :show-flags="true" />
         <b-nav-item :to="{ name: 'login' }">{{
           $ll("loginHeader")
         }}</b-nav-item>
         <b-nav-item :to="{ name: 'register' }">{{
           $ll("registerHeader")
         }}</b-nav-item>
+        <!-- <b-button
+          @click="handleSingOut"
+          v-if="isLoggedIn"
+          size="sm"
+          class="my-2 my-sm-0"
+          type="submit"
+          >Wyloguj</b-button
+        > -->
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -36,7 +44,32 @@
 <script>
 import Search from "@/components/search/search.vue";
 import Lang from "@/components/lang/lang.vue";
+// import { onMounted } from "vue";
+// import { getAuth, onAuthStateChanged, singOut } from "firebase/auth";
+// let auth;
 export default {
+  data() {
+    return {
+      // isLoggedIn: true,
+    };
+  },
+  // methods: {
+  //   onMounted: function() {
+  //     auth = getAuth();
+  //     onAuthStateChanged(auth, (user) => {
+  //       if (user) {
+  //         isLoggedIn = true;
+  //       } else {
+  //         isLoggedIn = false;
+  //       }
+  //     });
+  //   },
+  //   handleSingOut: function() {
+  //     singOut(auth).then(() => {
+  //       this.$router.push("/");
+  //     });
+  //   },
+  // },
   computed: {
     sidebar: {
       get() {
@@ -50,3 +83,13 @@ export default {
   components: { Search, Lang },
 };
 </script>
+<style lang="scss">
+.navbar {
+  &--pl {
+    background-color: red;
+  }
+  &--en {
+    background-color: blue;
+  }
+}
+</style>
