@@ -1,3 +1,10 @@
+import {
+  signInWithEmailAndPassword
+} from "firebase/auth";
+import {
+  auth
+} from "@/plugins/firebase/firebase";
+import Router from "@/router"
 export default {
   namespaced: true,
   state: {
@@ -6,5 +13,38 @@ export default {
   },
   getters: {},
   mutations: {},
-  actions: {},
+  actions: {
+    login(_, credentials) {
+      const {
+        email,
+        password
+      } = credentials
+      signInWithEmailAndPassword(auth, email, password)
+        .then((data) => {
+          console.log("Zalogowano Pomyślnie");
+          console.log(auth.currentUser);
+          Router.push("/");
+        })
+        .catch((error) => {
+          console.log(error.code);
+          switch (error.code) {
+            case "auth/invalid-email":
+              errMsg = "Invalid email";
+              break;
+            case "auth/user-not-found":
+              errMsg = "No account with thah email was found";
+              break;
+            case "auth/wrong-password":
+              errMsg = "Incorrect password";
+              break;
+            case "auth/user-disabled":
+              errMsg = "User is disabled";
+              break;
+            default:
+              errMsg = "Email or password was incorrect";
+          }
+          alert(error.message);
+        });
+    }
+  },
 }
