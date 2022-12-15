@@ -59,7 +59,7 @@ export default {
       const email = this.form.email;
       const password = this.form.password;
       let errMsg = this.form.errMsg;
-      this.$store.dispatch("Login/login", { email, password });
+      this.$store.dispatch("Login/login", { email, password, errMsg });
     },
   },
 };

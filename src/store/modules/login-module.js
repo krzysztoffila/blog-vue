@@ -15,18 +15,16 @@ export default {
   mutations: {},
   actions: {
     login(_, credentials) {
-      const {
+      let {
         email,
-        password
+        password,
+        errMsg
       } = credentials
       signInWithEmailAndPassword(auth, email, password)
         .then((data) => {
-          console.log("Zalogowano Pomyślnie");
-          console.log(auth.currentUser);
           Router.push("/");
         })
         .catch((error) => {
-          console.log(error.code);
           switch (error.code) {
             case "auth/invalid-email":
               errMsg = "Invalid email";

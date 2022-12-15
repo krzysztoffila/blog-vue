@@ -8,14 +8,15 @@
 [DONE] Przycisk aktywnej kategorii powinien miec klase button-primary a nie button-outline
 [DONE] Stworzyć cookie
 [DONE] Rejestracja, logowanie  w firebase
-       [TODO] - Problem przy pętli Switch(obsługa błędów)
+[DONE] - Problem przy pętli Switch(obsługa błędów)
 [DONE] Przekazać wartości rejestracji przez argumenty funkcji.
 [DONE] Naprawić przycisk - 68 linia w Header.vue
+[DONE] Przenieść logowanie, rejestracje do store
 ______________
 [TODO] Stworzyć kolekcję users - zapisywanie danych uzytkownika bez hasła
-[TODO] Przenieść logowanie, rejestracje do store
 [TODO] Poprawić języki na stronie
-[TODO] Zrobić toast -> trzymać w store
+[TODO] Poprawić informację o errorach(nie wyświetla się treść tylko typ błędu)
+[TODO] Zrobić toast -> trzymać w store - na przycisku do logowania v-if ternary (pomyslnie na zielono, błąd na czerwono z treścią errora)
 ______________
 
 BEM

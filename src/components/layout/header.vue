@@ -87,13 +87,3 @@ export default {
   components: { Search, Lang },
 };
 </script>
-<style lang="scss">
-.navbar {
-  &--pl {
-    background-color: red;
-  }
-  &--en {
-    background-color: blue;
-  }
-}
-</style>
