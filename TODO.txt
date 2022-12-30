@@ -17,10 +17,5 @@ ______________
 [TODO] Poprawić języki na stronie
 [TODO] Poprawić informację o errorach(nie wyświetla się treść tylko typ błędu)
 [TODO] Zrobić toast -> trzymać w store - na przycisku do logowania v-if ternary (pomyslnie na zielono, błąd na czerwono z treścią errora)
-______________
-
-BEM
-BLOK__ELEMENT--MODYFIKATOR
-DRUGI-BLOK__DRUGI-ELEMENT--JAKIS-MODYFIKATOR
-*.poczytac o paramsach routera !
-*.konwencja setter, getter
+[TODO] Przerobić importy w componentach na mapState
+[TODO] Komunikaty serwisowe pod tłuamczenia

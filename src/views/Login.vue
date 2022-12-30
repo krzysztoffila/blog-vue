@@ -32,12 +32,7 @@
           Register
         </b-button>
       </div>
-      <!-- <p v-if="errMsg">{{ errMsg }}</p> -->
-      <!-- dac if else w zaleznosci czy zalogowano pomyslnie czy nie
-        @click=makeToast('danger')"
-        @click="makeToast('success')"
-        CZY po @click="login" dac && (w podwojnych nawiasach -> "login...... && makeToast)-->
-      <b-button type="submit" @click="[login, makeToast()]"> Login </b-button>
+      <b-button type="submit" @click="login"> Login </b-button>
     </b-form>
   </div>
 </template>
@@ -49,7 +44,6 @@ export default {
       form: {
         email: "",
         password: "",
-        errMsg: "",
       },
     };
   },
@@ -60,15 +54,7 @@ export default {
     login() {
       const email = this.form.email;
       const password = this.form.password;
-      let errMsg = this.form.errMsg;
-      this.$store.dispatch("Login/login", { email, password, errMsg });
-    },
-    makeToast(variant = null) {
-      this.$bvToast.toast("Toast body content", {
-        title: `Variant ${variant || "default"}`,
-        variant: variant,
-        solid: true,
-      });
+      this.$store.dispatch("Login/login", { email, password });
     },
   },
 };

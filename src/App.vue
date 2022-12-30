@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header />
+    <Toast />
     <main>
       <router-view></router-view>
     </main>
@@ -9,11 +10,13 @@
 </template>
 <script>
 import Header from "@/components/layout/header.vue";
+import Toast from "@/components/toast/Toast.vue";
 import Footer from "@/components/layout/footer.vue";
 
 export default {
   components: {
     Header,
+    Toast,
     Footer,
   },
 };

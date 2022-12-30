@@ -14,17 +14,24 @@ export default {
   getters: {},
   mutations: {},
   actions: {
-    login(_, credentials) {
+    login({
+      commit
+    }, credentials) {
       let {
         email,
-        password,
-        errMsg
+        password
       } = credentials
       signInWithEmailAndPassword(auth, email, password)
         .then((data) => {
+          commit(`Toast/addToast`, {
+            message: 'Zalogowano Pomyślnie'
+          }, {
+            root: true
+          })
           Router.push("/");
         })
         .catch((error) => {
+          let errMsg = ''
           switch (error.code) {
             case "auth/invalid-email":
               errMsg = "Invalid email";
@@ -38,10 +45,19 @@ export default {
             case "auth/user-disabled":
               errMsg = "User is disabled";
               break;
+            case "auth/email-not-found":
+              errMsg = "Email not Found"
+              break;
             default:
               errMsg = "Email or password was incorrect";
+              break;
           }
-          alert(error.message);
+          commit(`Toast/addToast`, {
+            message: errMsg,
+            variant: 'danger'
+          }, {
+            root: true
+          })
         });
     }
   },
