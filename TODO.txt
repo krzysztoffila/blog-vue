@@ -12,10 +12,11 @@
 [DONE] Przekazać wartości rejestracji przez argumenty funkcji.
 [DONE] Naprawić przycisk - 68 linia w Header.vue
 [DONE] Przenieść logowanie, rejestracje do store
+[DONE] Zrobić toast -> trzymać w store - na przycisku do logowania (pomyslnie na zielono, błąd na czerwono z treścią errora)
+[DONE] Poprawić informację o errorach(nie wyświetla się treść tylko typ błędu)
+[DONE] Poprawić języki na stronie
 ______________
 [TODO] Stworzyć kolekcję users - zapisywanie danych uzytkownika bez hasła
-[TODO] Poprawić języki na stronie
-[TODO] Poprawić informację o errorach(nie wyświetla się treść tylko typ błędu)
-[TODO] Zrobić toast -> trzymać w store - na przycisku do logowania v-if ternary (pomyslnie na zielono, błąd na czerwono z treścią errora)
+[TODO] Poprawić obrazki, tekst i tłumaczenie dla bloga i zrobić logo
 [TODO] Przerobić importy w componentach na mapState
 [TODO] Komunikaty serwisowe pod tłuamczenia

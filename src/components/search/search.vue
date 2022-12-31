@@ -4,7 +4,7 @@
       v-model="search"
       size="sm"
       class="mr-sm-2"
-      placeholder="Szukaj"
+      :placeholder="$ll('searchPlaceholder')"
     ></b-form-input>
     <b-button size="sm" class="my-2 my-sm-0" type="submit">{{
       $ll("searchInput")

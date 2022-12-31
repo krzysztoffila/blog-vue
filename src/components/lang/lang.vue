@@ -1,5 +1,5 @@
 <template>
-  <b-nav-item-dropdown text="PL | EN" right>
+  <b-nav-item-dropdown :text="$ll('changeLanguage')" right>
     <b-dropdown-item
       v-for="language in languages"
       :key="language"

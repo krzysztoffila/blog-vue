@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row text-center">
         <h1 class="mx-auto" v-if="currentCategory.name">
-          KATEGORIA: {{ currentCategory.name }}
+          {{ $ll("categoryList") }}: {{ currentCategory.name }}
         </h1>
         <h1 class="mx-auto" v-else>{{ $ll("welcomeHome") }}</h1>
       </div>
@@ -24,15 +24,16 @@
         </router-link>
       </div>
       <div v-else class="row p-4 text-center">
-        <h2 class="mx-auto"><u>Nie znaleziono blogów</u></h2>
+        <h2 class="mx-auto">
+          <u>{{ $ll("noFindBlogs") }}</u>
+        </h2>
       </div>
     </div>
   </div>
 </template>
 <script>
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "@/plugins/firebase/firebase.js";
 import getCollection from "@/helpers/firestore/getCollection.js";
+import Lang from "@/components/lang/lang.vue";
 export default {
   data() {
     return {};
@@ -64,6 +65,7 @@ export default {
       return this.$store.state.Lang.lang;
     },
   },
+  components: { Lang },
   created() {
     getCollection("blogs", "Blog", "blogs");
   },

@@ -24,11 +24,9 @@
         <Search />
         <Lang :show-flags="true" />
         <template v-if="!isLoggedIn">
-          <b-nav-item :to="{ name: 'login' }">{{
-            $ll("loginHeader")
-          }}</b-nav-item>
+          <b-nav-item :to="{ name: 'login' }">{{ $ll("login") }}</b-nav-item>
           <b-nav-item :to="{ name: 'register' }">{{
-            $ll("registerHeader")
+            $ll("register")
           }}</b-nav-item>
         </template>
         <b-button
@@ -37,7 +35,7 @@
           size="sm"
           class="my-2 my-sm-0"
           type="submit"
-          >Wyloguj</b-button
+          >{{ $ll("logoutButton") }}</b-button
         >
       </b-navbar-nav>
     </b-collapse>

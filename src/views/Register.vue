@@ -1,11 +1,11 @@
 <template>
   <div>
     <b-form @submit="onSubmit">
-      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
+      <b-form-group id="input-group-2" label-for="input-2">
         <b-form-input
           id="input-2"
           v-model="form.name"
-          placeholder="Enter name"
+          :placeholder="$ll('enterName')"
           aria-describedby="input-name-feedback"
           :state="inputStates.name"
           required
@@ -16,15 +16,14 @@
       </b-form-group>
       <b-form-group
         id="input-group-1"
-        label="Email address:"
         label-for="input-1"
-        description="We'll never share your email with anyone else."
+        :description="$ll('noShareEmailInfo')"
       >
         <b-form-input
           id="input-1"
           v-model="form.email"
           type="email"
-          placeholder="Enter email"
+          :placeholder="$ll('enterEmail')"
           aria-describedby="input-email-feedback"
           :state="inputStates.email"
           required
@@ -33,16 +32,12 @@
           {{ errors.email }}
         </b-form-invalid-feedback>
       </b-form-group>
-      <b-form-group
-        id="input-group-2"
-        label="Your Password:"
-        label-for="input-2"
-      >
+      <b-form-group id="input-group-2" label-for="input-2">
         <b-form-input
           id="input-2"
           v-model="form.password"
           type="password"
-          placeholder="Enter password"
+          :placeholder="$ll('enterPassword')"
           aria-describedby="input-password-feedback"
           :state="inputStates.password"
           required
@@ -51,16 +46,12 @@
           {{ errors.password | errorsFilter }}
         </b-form-invalid-feedback>
       </b-form-group>
-      <b-form-group
-        id="input-group-2"
-        label="Confirm Password:"
-        label-for="input-2"
-      >
+      <b-form-group id="input-group-2" label-for="input-2">
         <b-form-input
           id="input-2"
           v-model="form.confirmPassword"
           type="password"
-          placeholder="Confirm password"
+          :placeholder="$ll('confirmPassword')"
           aria-describedby="input-confirm-password-feedback"
           :state="inputStates.confirmPassword"
           required
@@ -75,19 +66,20 @@
           id="checkboxes-4"
           :aria-describedby="ariaDescribedby"
         >
-          <b-form-checkbox v-model="form.rememberMe"
-            >Remember Me!</b-form-checkbox
-          >
+          <b-form-checkbox v-model="form.rememberMe">
+            {{ $ll("rememberMe") }}
+          </b-form-checkbox>
         </b-form-checkbox-group>
       </b-form-group>
-      <b-button type="submit" variant="primary" @click="register"
-        >Register</b-button
+      <b-button type="submit" variant="primary" @click="register">
+        {{ $ll("register") }}</b-button
       >
     </b-form>
   </div>
 </template>
 
 <script>
+import Lang from "@/components/lang/lang.vue";
 export default {
   data() {
     return {
@@ -155,5 +147,6 @@ export default {
       },
     },
   },
+  components: { Lang },
 };
 </script>
