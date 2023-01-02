@@ -22,7 +22,14 @@ export default {
         rememberMe: 'Zapamiętaj mnie',
         noShareEmailInfo: 'Nigdy nie udostępnimy Twojego maila nikomu innemu.',
         categoryList: 'Kategoria',
-        noFindBlogs: 'Nie znaleziono blogów'
+        noFindBlogs: 'Nie znaleziono blogów',
+        invalidEmail: 'Niepoprawny Email',
+        noAccountFound: 'Nie znaleziono konta przypisanego do tego maila',
+        incorrectPassword: 'Niepoprawne hasło',
+        disabledUser: 'Nazwa tego uzytkownika jest zajęta',
+        emailNotFound: 'Nie znaleziono maila',
+        emailOrPasswordNotFound: 'Email lub hasło jest nieprawidłowe',
+
       },
       en: {
         welcomeHome: 'Hello Mate! - Welcome on my Blog!',
@@ -41,7 +48,13 @@ export default {
         rememberMe: 'Remember Me',
         noShareEmailInfo: `We'll never share your email with anyone else.`,
         categoryList: 'Category',
-        noFindBlogs: 'No Find Blogs'
+        noFindBlogs: 'No Find Blogs',
+        invalidEmail: 'Invalid email',
+        noAccountFound: 'No account with thah email was found"',
+        incorrectPassword: 'Incorrect password',
+        disabledUser: 'User is disabled',
+        emailNotFound: 'Email not Found',
+        emailOrPasswordNotFound: 'Email or password was incorrect',
       }
     }
     return {
