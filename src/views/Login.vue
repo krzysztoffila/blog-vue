@@ -40,7 +40,6 @@ import Lang from "@/components/lang/lang.vue";
 export default {
   data() {
     return {
-      a: "asdasd",
       form: {
         email: "",
         password: "",

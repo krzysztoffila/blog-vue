@@ -68,7 +68,8 @@ export default {
         if (this.$route.path != "/") {
           this.$router.push("/");
         }
-        console.log("Wylogowano!");
+
+        console.log("Po TOASCIE Wylogowano!");
       });
     },
   },

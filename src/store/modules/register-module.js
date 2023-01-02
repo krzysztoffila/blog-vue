@@ -8,16 +8,20 @@ import Router from "@/router"
 export default {
   namespaced: true,
   actions: {
-    register(_, credentials) {
+    register({
+      commit
+    }, credentials) {
       const {
         email,
         password
       } = credentials
       createUserWithEmailAndPassword(auth, email, password)
         .then((data) => {
-          console.log("Zarejestrowano Pomyślnie");
-          console.log(auth.currentUser);
-          console.log(Router);
+          commit(`Toast/addToast`, {
+            message: 'Zarejestrowano i Zalogowano Pomyślnie'
+          }, {
+            root: true
+          })
           Router.push("/");
         })
         .catch((error) => {
