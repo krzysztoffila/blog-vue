@@ -29,7 +29,6 @@ export default {
         disabledUser: 'Nazwa tego uzytkownika jest zajęta',
         emailNotFound: 'Nie znaleziono maila',
         emailOrPasswordNotFound: 'Email lub hasło jest nieprawidłowe',
-
       },
       en: {
         welcomeHome: 'Hello Mate! - Welcome on my Blog!',

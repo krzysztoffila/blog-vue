@@ -1,3 +1,4 @@
+import Vue from "vue";
 import {
   signInWithEmailAndPassword
 } from "firebase/auth";
@@ -9,7 +10,7 @@ export default {
   namespaced: true,
   state: {
     email: '',
-    password: ''
+    password: '',
   },
   getters: {},
   mutations: {},
@@ -34,22 +35,22 @@ export default {
           let errMsg = ''
           switch (error.code) {
             case "auth/invalid-email":
-              errMsg = "Invalid email";
+              errMsg = Vue.prototype.$ll("invalidEmail")
               break;
             case "auth/user-not-found":
-              errMsg = "No account with thah email was found";
+              errMsg = Vue.prototype.$ll('noAccountFound')
               break;
             case "auth/wrong-password":
-              errMsg = "Incorrect password";
+              errMsg = Vue.prototype.$ll('incorrectPassword')
               break;
             case "auth/user-disabled":
-              errMsg = "User is disabled";
+              errMsg = Vue.prototype.$ll('disabledUser')
               break;
             case "auth/email-not-found":
-              errMsg = "Email not Found"
+              errMsg = Vue.prototype.$ll('emailNotFound')
               break;
             default:
-              errMsg = "Email or password was incorrect";
+              errMsg = Vue.prototype.$ll('emailOrPasswordNotFound')
               break;
           }
           commit(`Toast/addToast`, {

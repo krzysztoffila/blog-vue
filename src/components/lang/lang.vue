@@ -29,6 +29,9 @@ export default {
     languages() {
       return this.$store.state.Lang.languages;
     },
+    lang() {
+      return this.$store.state.Lang.lang;
+    },
   },
   methods: {
     setLang(language) {
