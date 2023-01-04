@@ -1,4 +1,3 @@
-import Vue from "vue";
 import {
   signInWithEmailAndPassword
 } from "firebase/auth";
@@ -25,7 +24,7 @@ export default {
       signInWithEmailAndPassword(auth, email, password)
         .then((data) => {
           commit(`Toast/addToast`, {
-            message: 'Zalogowano Pomyślnie'
+            message: this._vm.$ll("successLogin")
           }, {
             root: true
           })
@@ -35,22 +34,22 @@ export default {
           let errMsg = ''
           switch (error.code) {
             case "auth/invalid-email":
-              errMsg = Vue.prototype.$ll("invalidEmail")
+              errMsg = this._vm.$ll("invalidEmail")
               break;
             case "auth/user-not-found":
-              errMsg = Vue.prototype.$ll('noAccountFound')
+              errMsg = this._vm.$ll('noAccountFound')
               break;
             case "auth/wrong-password":
-              errMsg = Vue.prototype.$ll('incorrectPassword')
+              errMsg = this._vm.$ll('incorrectPassword')
               break;
             case "auth/user-disabled":
-              errMsg = Vue.prototype.$ll('disabledUser')
+              errMsg = this._vm.$ll('disabledUser')
               break;
             case "auth/email-not-found":
-              errMsg = Vue.prototype.$ll('emailNotFound')
+              errMsg = this._vm.$ll('emailNotFound')
               break;
             default:
-              errMsg = Vue.prototype.$ll('emailOrPasswordNotFound')
+              errMsg = this._vm.$ll('emailOrPasswordNotFound')
               break;
           }
           commit(`Toast/addToast`, {

@@ -15,8 +15,10 @@
 [DONE] Zrobić toast -> trzymać w store - na przycisku do logowania (pomyslnie na zielono, błąd na czerwono z treścią errora)
 [DONE] Poprawić informację o errorach(nie wyświetla się treść tylko typ błędu)
 [DONE] Poprawić języki na stronie
+[DONE] Komunikaty serwisowe pod tłuamczenia
 ______________
-[TODO] Stworzyć kolekcję users - zapisywanie danych uzytkownika bez hasła
+[TODO] Utworzyć kolekcję users - zapisywanie danych uzytkownika bez hasła
+[TODO] Utworzyć kolekcję tłumaczeń
 [TODO] Poprawić obrazki, tekst i tłumaczenie dla bloga i zrobić logo
 [TODO] Przerobić importy w componentach na mapState
-[TODO] Komunikaty serwisowe pod tłuamczenia
+

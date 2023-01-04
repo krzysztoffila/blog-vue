@@ -29,6 +29,8 @@ export default {
         disabledUser: 'Nazwa tego uzytkownika jest zajęta',
         emailNotFound: 'Nie znaleziono maila',
         emailOrPasswordNotFound: 'Email lub hasło jest nieprawidłowe',
+        successLogin: "Zalogowano Pomyślnie",
+        successLogout: "Wylogowano Pomyślnie"
       },
       en: {
         welcomeHome: 'Hello Mate! - Welcome on my Blog!',
@@ -49,11 +51,13 @@ export default {
         categoryList: 'Category',
         noFindBlogs: 'No Find Blogs',
         invalidEmail: 'Invalid email',
-        noAccountFound: 'No account with thah email was found"',
+        noAccountFound: 'No account with thah email was found',
         incorrectPassword: 'Incorrect password',
         disabledUser: 'User is disabled',
         emailNotFound: 'Email not Found',
         emailOrPasswordNotFound: 'Email or password was incorrect',
+        successLogin: "Logged Successfully",
+        successLogout: "Logout Successfully"
       }
     }
     return {
