@@ -15,7 +15,7 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item @click="sidebar = !sidebar">{{
-          $ll("categoryHeader")
+          $ll("categoryHeader") || "Fallback Text"
         }}</b-nav-item>
       </b-navbar-nav>
 
