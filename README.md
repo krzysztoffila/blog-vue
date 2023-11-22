@@ -9,7 +9,7 @@ Projekt Blog Vue to blog działający w czasie rzeczywistym, który umożliwia u
 - **Firebase:** Używany do synchronizacji danych w czasie rzeczywistym i hostingu.
 - **Bootstrap Vue:** Framework do budowania responsywnych i mobilnych aplikacji.
 
-Był to mój pierwszy projekt Vue.js który pisałęm pod okiem doświadczonego programisty. Komunikowaliśmy się ze sobą za pomocą programu JIRA, gdzie wrzucał mi zadania. Raz w tygodniu również mieliśmy meeting co można udoskonalić.
+Był to mój pierwszy projekt Vue.js który kodowałem pod okiem doświadczonego programisty. Komunikowaliśmy się ze sobą za pomocą programu JIRA, gdzie wrzucał mi zadania. Raz w tygodniu również mieliśmy meeting co można udoskonalić.
 
 ## Project setup
 ```
