@@ -2,8 +2,6 @@
 
 Projekt Blog Vue to blog działający w czasie rzeczywistym, który umożliwia użytkownikom natychmiastowe wyszukiwanie postów. Używa plików cookie do przechowywania preferowanego języka (PL/EN), w którym napisane są posty. 
 
-- **Next.js:** Użyłem najnowszej wersji (13.4) Next.js, aby tworzyć zarówno stronę klienta, jak i serwerową.
-
 - **HTML:** Struktura stron internetowych.
 - **CSS:** Stylizacja dla estetycznego interfejsu użytkownika.
 - **JavaScript:** Dodaje interaktywność do aplikacji.
