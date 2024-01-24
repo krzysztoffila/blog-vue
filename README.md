@@ -1,15 +1,15 @@
 # Real-time Blog with Language Preferences
 
-Projekt Blog Vue to blog działający w czasie rzeczywistym, który umożliwia użytkownikom natychmiastowe wyszukiwanie postów. Używa plików cookie do przechowywania preferowanego języka (PL/EN), w którym napisane są posty. 
+The Blog Vue project is a real-time blog that allows users to search for posts instantly. It uses cookies to store the preferred language (PL/EN) in which posts are written.
 
-- **HTML:** Struktura stron internetowych.
-- **CSS:** Stylizacja dla estetycznego interfejsu użytkownika.
-- **JavaScript:** Dodaje interaktywność do aplikacji.
-- **Vue.js:** Framework JavaScript do tworzenia interfejsów użytkownika.
-- **Firebase:** Używany do synchronizacji danych w czasie rzeczywistym i hostingu.
-- **Bootstrap Vue:** Framework do budowania responsywnych i mobilnych aplikacji.
+- **HTML:** The structure of web pages.
+- **CSS:** Styling for an aesthetically pleasing user interface.
+- **JavaScript:** Adds interactivity to applications.
+- **Vue.js:** JavaScript framework for creating user interfaces version 2.
+- **Firebase:** Used for real-time data synchronization and hosting.
+- **Bootstrap Vue:** Framework for building responsive and mobile applications.
 
-Był to mój pierwszy projekt Vue.js który kodowałem pod okiem doświadczonego programisty. Komunikowaliśmy się ze sobą za pomocą programu JIRA, gdzie wrzucał mi zadania. Raz w tygodniu również mieliśmy meeting co można udoskonalić.
+This was my first Vue.js project that I coded under the guidance of an experienced programmer. We communicated with each other using JIRA, where he would drop tasks to me. Once a week we also had a meeting about what could be improved.
 
 ## Project setup
 ```
