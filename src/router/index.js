@@ -16,7 +16,6 @@ const routes = [{
     }
   },
   {
-    //Przykładowy params TO PO :
     path: '/blog/:blogId',
     name: 'singleBlog',
     component: SingleBlog,

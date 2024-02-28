@@ -20,7 +20,6 @@
         }}</b-nav-item>
       </b-navbar-nav>
 
-      <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         <Search />
         <Lang :show-flags="true" />
@@ -69,7 +68,7 @@ export default {
         if (this.$route.path != "/") {
           this.$router.push("/");
         }
-        console.log("WYLOGOWANO(ZROBIĆ TOAST)");
+        alert("Wylogowano Pomyślnie");
       });
     },
   },
