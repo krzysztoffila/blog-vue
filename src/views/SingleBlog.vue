@@ -2,7 +2,12 @@
   <div class="single-blog container">
     <h1 class="text-center">{{ blog.title_pl }}</h1>
     <h2 class="text-center">{{ blog.subtitle_pl }}</h2>
-    <img class="img-fluid" :src="blog.photo" alt="" />
+    <img
+      class="img-fluid mx-auto d-block"
+      :src="blog.photo"
+      alt=""
+      style="max-width: 500px; max-height: 500px"
+    />
     <p class="m-5">{{ blog.content_pl }}</p>
   </div>
 </template>
@@ -19,5 +24,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
