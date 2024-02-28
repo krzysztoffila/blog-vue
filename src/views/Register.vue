@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="form-container">
     <b-form @submit="onSubmit">
       <b-form-group id="input-group-2" label-for="input-2">
         <b-form-input
@@ -150,3 +150,13 @@ export default {
   components: { Lang },
 };
 </script>
+<style scoped lang="scss">
+.form-container {
+  max-width: 20%;
+  margin: 0 auto;
+  padding: 20px;
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+}
+</style>
