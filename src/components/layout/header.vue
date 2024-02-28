@@ -2,11 +2,12 @@
   <b-navbar toggleable="lg" type="dark" variant="info">
     <router-link to="/">
       <b-navbar-brand>
-        <!-- <img
+        <img
           class="navbar-logo"
-          src="../../assets/logo.png"
+          src="../../assets/icons/logo.webp"
           alt="Tryvium Logo"
-        /> -->LOGO
+          width="30px"
+        />
       </b-navbar-brand>
     </router-link>
 
