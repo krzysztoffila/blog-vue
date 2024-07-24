@@ -14,7 +14,14 @@
           v-for="blog in blogs"
           :key="`blog-${blog.id}`"
         >
-          <img class="img-fluid mb-2" :src="blog.photo" alt="" loading="lazy" />
+          <div class="image-container">
+            <img
+              class="img-fluid mb-2"
+              :src="blog.photo"
+              alt=""
+              loading="lazy"
+            />
+          </div>
           <h4 class="font-weight-bold text-center mb-0">
             {{ blog[`title_${lang}`] }}
           </h4>
@@ -31,6 +38,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import getCollection from "@/helpers/firestore/getCollection.js";
 import Lang from "@/components/lang/lang.vue";
@@ -71,6 +79,7 @@ export default {
   },
 };
 </script>
+
 <style scoped lang="scss">
 a {
   color: #000;
@@ -82,5 +91,20 @@ a {
 }
 h1 {
   padding-bottom: 2rem;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 </style>
